@@ -1,0 +1,259 @@
+.page_banner{
+    height: 40vh;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: $space_l_32;
+    .page_banner_overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $white_colour;
+        opacity: .7;
+        }
+        .about_banner_heading{
+            @include heading_3($main_font, $primary_colour);
+            position: relative;
+            z-index: 5;
+            text-transform: uppercase;
+        }    
+    }
+.about_banner{
+    background-image: url(../images/JCNP_About_Us_Banner.jpg);
+}
+
+/*-------SECTION ONE----------*/
+
+.about_section_1_container{
+    // padding: $space_xxl_64 0;
+    display: grid;
+    margin-top: $space_xl_48;
+
+    .about_section_1_left{
+        .about_section_1_left_caption{
+            @include heading_4($main_font, $primary_colour);
+            padding-bottom: $space_l_32;
+            text-align: center;
+            text-transform: uppercase;
+            span{
+                color: $secondary_colour;
+            }
+        }
+        .about_section_1_left_text{
+            @include body_copy($alt_font, $dark_colour);
+            text-align: justify;
+            padding-bottom: $space_l_32;
+        }
+        .about_section_1_left_cta{
+            display: none;
+            visibility: hidden;
+        }
+
+    
+    }
+    .about_section_1_right{
+        img{
+            width: 100%;
+        }
+    }
+    
+}
+    
+/*-------------About Section 2---------------*/
+.about_section_2{
+    min-height: 50vh;
+    width:100%;
+    margin-top: $space_l_32;
+}
+.about_section_2_container{
+    min-height: 40vh;
+    width: 100%;
+   
+    .about_section_2_left{
+        display: flex;
+        flex-direction: column;
+        gap: $space_l_32;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width:100%;
+        background-color: $light_colour;
+        padding: $space_m_24;
+        h3{
+            @include heading_4($main_font, $secondary_colour);
+            text-transform: uppercase;
+            text-align: center;
+        }
+        p{
+            @include body_copy($alt_font, $dark_colour);
+            text-align: center;
+            max-width: 360px;
+        }
+        button{
+            align-self: flex-start;
+            align-self: center;
+        }
+        
+    }
+    .about_section_2_right{
+        display: flex;
+        flex-direction: column;
+        gap: $space_l_32;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width:100%;
+        background-color: $secondary_colour;
+        padding: $space_m_24;
+        h3{
+            @include heading_4($main_font, $primary_colour);
+            text-transform: uppercase;
+            text-align: center;
+        }
+        p{
+            @include body_copy($alt_font, $white_colour);
+            text-align: center;
+        }
+        button{
+            align-self: center;
+        }
+
+    }
+}
+
+
+/*--------------About section 3---------------------*/
+
+.about_section_3{
+    min-height:100vh;
+    width: 100%;
+    margin-top: $space_xl_48;
+    margin-bottom: $space_xl_48;
+    .about_section_3_container{
+
+        h2{
+            @include heading_4($main_font, $primary_colour);
+            padding-bottom: $space_l_32;
+            
+            text-transform: uppercase;
+            span{
+                color: $secondary_colour;
+            }  
+        }
+        .about_section_3_excecs{
+            
+            .about_section_3_excec{
+                display: flex;
+                flex-direction: column;
+                gap: $space_m_24;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                   
+                h4{
+                    @include heading_5($alt_font, $secondary_colour);
+                    text-transform: uppercase;
+
+                }
+                h5{
+                    @include heading_5($alt_font, $primary_colour);
+
+                }
+                p{
+                    @include body_copy($alt_font, $dark_colour);
+                }
+            }
+        }
+       img.team_img{
+        width: 100%;
+        height: 100%;
+       }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Media Queries
+@media screen and (min-width: 800px) and (max-width: 1020px){
+    .about_section_2_container{
+        display: grid !important;
+        height: 30vh;
+        grid-template-columns: 1fr 1fr !important;
+        .about_section_2_left{
+            justify-content: space-between;
+        }
+        .about_section_2_right{
+            justify-content: space-between;
+        }
+      
+    }
+    .about_section_3_excecs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $space_m_24;
+        margin-bottom: $space_m_24;
+    }
+}
+
+
+@media screen and (min-width: 1021px){
+    .about_section_1_container{
+        .about_section_1_left_caption{
+            text-align: left !important;
+        }
+        grid-template-columns: 1fr 1fr;
+        gap: $space_xl_48;
+
+        .about_section_1_left_cta{
+            display: block !important;
+            visibility: visible !important;
+        }
+        
+    }
+
+    .about_section_2{
+        // height: auto !important;
+    }
+
+    .about_section_2_container{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        height: 30vh !important;
+        width: 100% !important;
+        .about_section_2_left{
+            justify-content: space-between;
+        }
+        .about_section_2_right{
+            justify-content: space-between;
+        }
+      
+    }
+
+    .about_section_3_excecs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $space_m_24;
+        margin-bottom: $space_m_24;
+       
+    }
+}

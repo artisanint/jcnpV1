@@ -1,0 +1,56 @@
+//Page Resets
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   *li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   }
+   *a{
+    text-decoration: none;
+   }
+   *ul{
+    margin: 0;
+    padding: 0;
+   }
+   
+
+
+//Imporing Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500&display=swap');
+//Importing Variables and resets
+@import './Variables/variables';
+@import './Variables/typography';
+//Importing Components
+
+.container{
+    width: clamp(250px, 90vw, 1440px);
+    height: 100%;
+    margin: 0 auto;
+
+   }
+
+@import './components/header';
+@import './components/footer';
+//Importing Page Styles
+@import './page_styles/home';
+@import './page_styles/about';
+@import './page_styles/blog';
+@import './page_styles/services';
+@import './page_styles/contact';
+@import './page_styles/post';
+@import './components/buttons';
+
+
+
+
+@media screen and (max-width: 480px){
+    .container{
+        padding:  0 10px;
+    }
+}
