@@ -84,7 +84,7 @@ img{
 .home_services_container{
     height: 100%;
     width: 100%;
-    background-color: $white_colour;
+    background-color: $light_colour;
 }
 
 .home_services_left{
@@ -103,6 +103,8 @@ img{
     height: 100%;
     width: 100%;
     margin-top: $space_xxl_64;
+    background-color: $light_colour;
+    // background-color: blue;
 
 
     .service_card{
@@ -112,6 +114,8 @@ img{
         justify-content: center;
         gap: $space_m_24;
         margin-bottom : $space_xl_48;
+        background-color: $light_colour;
+        // background-color: salmon;
 
         h3{
             @include heading_5($main_font, $dark_colour);
@@ -178,12 +182,38 @@ img{
 
 //Media Queries
 @media screen and (min-width: 800px) and (max-width: 1020px){
-
+    .home_services_right{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $space_m_24 !important;
+    }
 
 }
 
 
 @media screen and (min-width: 1021px){
-   
+    .home_services_right{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $space_xl_48 !important; 
+        margin-top:0 !important;
+        align-content: center;
+    }
 
+    .home_services_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $space_xxl_64 !important;
+    }
+
+    .service_card{
+        margin-bottom : 0 !important;
+        justify-content:flex-start !important;
+        max-height:400px !important;
+        gap: $space_l_32 !important;
+        p{
+            text-align: justify  !important;
+        }
+        
+    }
 }

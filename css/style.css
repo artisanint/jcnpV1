@@ -483,7 +483,7 @@ section.home_hero {
 .home_services_container {
   height: 100%;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #F8F6F6;
 }
 
 .home_services_left {
@@ -501,6 +501,7 @@ section.home_hero {
   height: 100%;
   width: 100%;
   margin-top: clamp(3.5rem, 3.33rem + 0.74vw, 4rem);
+  background-color: #F8F6F6;
 }
 .home_services_right .service_card {
   display: flex;
@@ -509,6 +510,7 @@ section.home_hero {
   justify-content: center;
   gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
   margin-bottom: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
+  background-color: #F8F6F6;
 }
 .home_services_right .service_card h3 {
   font-family: "Montserrat", sans-serif;
@@ -566,6 +568,36 @@ section.home_hero {
   width: 250px;
 }
 
+@media screen and (min-width: 800px) and (max-width: 1020px) {
+  .home_services_right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem) !important;
+  }
+}
+@media screen and (min-width: 1021px) {
+  .home_services_right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2.63rem, 2.5rem + 0.56vw, 3rem) !important;
+    margin-top: 0 !important;
+    align-content: center;
+  }
+  .home_services_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3.5rem, 3.33rem + 0.74vw, 4rem) !important;
+  }
+  .service_card {
+    margin-bottom: 0 !important;
+    justify-content: flex-start !important;
+    max-height: 400px !important;
+    gap: clamp(1.75rem, 1.67rem + 0.37vw, 2rem) !important;
+  }
+  .service_card p {
+    text-align: justify !important;
+  }
+}
 .page_banner {
   height: 40vh;
   width: 100%;
