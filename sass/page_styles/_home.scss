@@ -119,7 +119,7 @@ img{
 
         h3{
             @include heading_5($main_font, $dark_colour);
-            text-align: center
+            text-align: center;
         }
 
         p{
@@ -133,6 +133,75 @@ img{
     }
 }
 
+
+/*---------------Home About-----------*/
+.home_about{
+    min-height: 100vh;
+    width:100%;
+    padding: $space_l_32 0;
+}
+
+.home_about_container{
+    width: 100%;
+    height: 100%;
+}
+
+.home_about_left{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: $space_l_32;
+   h3{
+    @include heading_5($main_font, $primary_colour);
+    text-align: left;
+    
+   }
+
+   p{
+    @include body_copy($main_font, $dark_colour);
+    text-align: justify;
+}
+
+.home_about_left_numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space_l_32;
+
+    .numbers_2, .numbers_4{
+        align-self: safe end;
+    }
+    
+    
+    .numbers{
+        h4{
+            @include heading_4($main_font, $secondary_colour);
+            margin-bottom: $space_s_16;
+        }
+
+        p{
+            @include body_copy($main_font, $dark_colour);
+            text-align: left;
+            font-weight: 600;
+
+        }
+    }
+}
+   
+}
+
+.home_about_right{
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    margin-top: $space_l_32;
+    height: 100%;
+    width: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;   
+    }
+}
 
 /*-------------Clients Section-------------------*/
 @keyframes scroll{
