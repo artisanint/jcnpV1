@@ -754,6 +754,11 @@ section.home_hero {
   display: grid;
   margin-top: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
 }
+.about_section_1_container .about_section_1_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .about_section_1_container .about_section_1_left .about_section_1_left_caption {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(1.56rem, 1.48rem + 0.33vw, 1.78rem);
@@ -784,74 +789,81 @@ section.home_hero {
 
 /*-------------About Section 2---------------*/
 .about_section_2 {
-  min-height: 50vh;
-  width: 100%;
-  margin-top: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
-}
-
-.about_section_2_container {
-  min-height: 40vh;
-  width: 100%;
-}
-.about_section_2_container .about_section_2_left {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
   height: 100%;
   width: 100%;
-  background-color: #F8F6F6;
-  padding: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+  margin-top: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
 }
-.about_section_2_container .about_section_2_left h3 {
+
+.about_section_2_left {
+  margin-bottom: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+}
+.about_section_2_left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about_section_2_right {
+  width: 100%;
+}
+.about_section_2_right .mission_vision_container {
+  display: grid;
+  gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+  width: 100%;
+  gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+}
+.about_section_2_right .mission_vision_container .mission_vision {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+  width: 100%;
+}
+.about_section_2_right .mission_vision_container .mission_vision h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1.56rem, 1.48rem + 0.33vw, 1.78rem);
+  font-size: clamp(1.17rem, 1.11rem + 0.25vw, 1.33rem);
   line-height: 120%;
-  color: #130c0c;
-  text-transform: uppercase;
-  text-align: center;
+  color: #bb0722;
 }
-.about_section_2_container .about_section_2_left p {
-  font-family: "Open Sans", sans-serif;
+.about_section_2_right .mission_vision_container .mission_vision p {
+  font-family: "Montserrat", sans-serif;
   font-size: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
   line-height: 145%;
   color: #282828;
-  text-align: center;
-  max-width: 360px;
+  text-align: justify;
 }
-.about_section_2_container .about_section_2_left button {
-  align-self: flex-start;
-  align-self: center;
+.about_section_2_right .mission_vision_container .mission_vision button {
+  width: 100%;
 }
-.about_section_2_container .about_section_2_right {
+.about_section_2_right .pillars {
+  display: grid;
+  gap: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
+  margin-top: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
+}
+.about_section_2_right .pillars .pillar {
   display: flex;
   flex-direction: column;
-  gap: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
-  justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: #130c0c;
-  padding: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+  justify-content: center;
+  gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
 }
-.about_section_2_container .about_section_2_right h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(1.56rem, 1.48rem + 0.33vw, 1.78rem);
-  line-height: 120%;
+.about_section_2_right .pillars .pillar i.fa-solid {
   color: #bb0722;
+  font-size: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
+  width: clamp(3.5rem, 3.33rem + 0.74vw, 4rem);
+  text-align: center;
+}
+.about_section_2_right .pillars .pillar p {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.17rem, 1.11rem + 0.25vw, 1.33rem);
+  line-height: 120%;
+  color: #282828;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-}
-.about_section_2_container .about_section_2_right p {
-  font-family: "Open Sans", sans-serif;
-  font-size: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
-  line-height: 145%;
-  color: #FFFFFF;
-  text-align: center;
-}
-.about_section_2_container .about_section_2_right button {
-  align-self: center;
 }
 
 /*--------------About section 3---------------------*/
@@ -878,8 +890,8 @@ section.home_hero {
   gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
 }
 .about_section_3 .about_section_3_container .about_section_3_excecs .about_section_3_excec img {
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
 }
 .about_section_3 .about_section_3_container .about_section_3_excecs .about_section_3_excec h4 {
   font-family: "Open Sans", sans-serif;
@@ -899,6 +911,7 @@ section.home_hero {
   font-size: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
   line-height: 145%;
   color: #282828;
+  text-align: justify;
 }
 .about_section_3 .about_section_3_container img.team_img {
   width: 100%;
@@ -906,18 +919,14 @@ section.home_hero {
 }
 
 @media screen and (min-width: 800px) and (max-width: 1020px) {
-  .about_section_2_container {
-    display: grid !important;
-    height: 30vh;
-    grid-template-columns: 1fr 1fr !important;
+  .about_section_2_right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-  .about_section_2_container .about_section_2_left {
-    justify-content: space-between;
+  .pillars {
+    grid-template-columns: 1fr 1fr;
   }
-  .about_section_2_container .about_section_2_right {
-    justify-content: space-between;
-  }
-  .about_section_3_excecs {
+  .mission_visio .about_section_3_excecs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
@@ -937,21 +946,33 @@ section.home_hero {
     visibility: visible !important;
   }
   .about_section_2_container {
-    display: grid !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
+  }
+  .about_section_2_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -5rem;
+  }
+  .mission_vision_container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .pillars {
     grid-template-columns: 1fr 1fr !important;
-    height: 30vh !important;
-    width: 100% !important;
+    gap: clamp(2.63rem, 2.5rem + 0.56vw, 3rem) !important;
   }
-  .about_section_2_container .about_section_2_left {
-    justify-content: space-between;
+  .pillars .pillar i.fa-solid {
+    font-size: clamp(3.5rem, 3.33rem + 0.74vw, 4rem) !important;
   }
-  .about_section_2_container .about_section_2_right {
-    justify-content: space-between;
+  .mission_vision button {
+    width: auto !important;
   }
   .about_section_3_excecs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+    gap: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
     margin-bottom: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
   }
 }

@@ -37,6 +37,9 @@
     margin-top: $space_xl_48;
 
     .about_section_1_left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .about_section_1_left_caption{
             @include heading_4($main_font, $primary_colour);
             padding-bottom: $space_l_32;
@@ -68,66 +71,78 @@
     
 /*-------------About Section 2---------------*/
 .about_section_2{
-    min-height: 50vh;
-    width:100%;
-    margin-top: $space_l_32;
-}
-.about_section_2_container{
-    min-height: 40vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
-   
-    .about_section_2_left{
-        display: flex;
-        flex-direction: column;
-        gap: $space_l_32;
-        justify-content: center;
-        align-items: center;
+    margin-top: $space_m_24;
+}
+.about_section_2_left{
+    margin-bottom: $space_m_24;
+    img{
+        width: 100%;
         height: 100%;
-        width:100%;
-        background-color: $light_colour;
-        padding: $space_m_24;
-        h3{
-            @include heading_4($main_font, $secondary_colour);
-            text-transform: uppercase;
-            text-align: center;
-        }
-        p{
-            @include body_copy($alt_font, $dark_colour);
-            text-align: center;
-            max-width: 360px;
-        }
-        button{
-            align-self: flex-start;
-            align-self: center;
-        }
-        
-    }
-    .about_section_2_right{
-        display: flex;
-        flex-direction: column;
-        gap: $space_l_32;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width:100%;
-        background-color: $secondary_colour;
-        padding: $space_m_24;
-        h3{
-            @include heading_4($main_font, $primary_colour);
-            text-transform: uppercase;
-            text-align: center;
-        }
-        p{
-            @include body_copy($alt_font, $white_colour);
-            text-align: center;
-        }
-        button{
-            align-self: center;
-        }
-
+        object-fit: cover;
     }
 }
 
+.about_section_2_right{
+    width: 100%;
+   .mission_vision_container{
+    display: grid;
+    gap: $space_m_24;
+    width: 100%;
+    gap: $space_m_24;
+
+    .mission_vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:$space_s_16;
+        width: 100%;
+        h3{
+            @include heading_5($main_font, $primary_colour);
+            // padding-bottom: $space_m_24;
+
+        }
+        p{
+            @include body_copy($main_font, $dark_colour);
+            text-align: justify;
+        }
+        button{
+            width: 100%;
+        }
+    }
+   }
+   .pillars{
+     display: grid;
+     gap: $space_l_32;
+     margin-top: $space_xl_48;
+
+     .pillar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $space_m_24;
+        i.fa-solid{
+            color: $primary_colour;
+            font-size: $space_l_32;
+            // height: $space_xxl_64;
+            width:$space_xxl_64;
+            text-align: center
+        }
+        p{
+            @include heading_5($main_font, $dark_colour);
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            // padding-top: $space_l_32;
+        }
+     }
+   }
+
+}
 
 /*--------------About section 3---------------------*/
 
@@ -154,8 +169,8 @@
                 flex-direction: column;
                 gap: $space_m_24;
                 img{
-                    width: 100%;
-                    height: 100%;
+                    width: 200px;
+                    height: 200px;
                 }
                    
                 h4{
@@ -169,6 +184,7 @@
                 }
                 p{
                     @include body_copy($alt_font, $dark_colour);
+                    text-align:justify ;
                 }
             }
         }
@@ -195,18 +211,15 @@
 
 //Media Queries
 @media screen and (min-width: 800px) and (max-width: 1020px){
-    .about_section_2_container{
-        display: grid !important;
-        height: 30vh;
-        grid-template-columns: 1fr 1fr !important;
-        .about_section_2_left{
-            justify-content: space-between;
-        }
-        .about_section_2_right{
-            justify-content: space-between;
-        }
-      
+    .about_section_2_right{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
+    .pillars{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+   .mission_visio
     .about_section_3_excecs{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -230,29 +243,40 @@
         }
         
     }
-
-    .about_section_2{
-        // height: auto !important;
-    }
-
     .about_section_2_container{
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        height: 30vh !important;
-        width: 100% !important;
-        .about_section_2_left{
-            justify-content: space-between;
-        }
-        .about_section_2_right{
-            justify-content: space-between;
-        }
-      
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:$space_l_32;
     }
+    .about_section_2_right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -5rem;
+    }
+    .mission_vision_container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .pillars{
+        grid-template-columns: 1fr 1fr  !important;
+        gap: $space_xl_48 !important;
+        .pillar{
+            i.fa-solid{
+                font-size: $space_xxl_64 !important;
+            }
+        }
+    }
+    .mission_vision{
+        button{
+            width: auto !important;
+        }
+    }
+
 
     .about_section_3_excecs{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: $space_m_24;
+        gap: $space_xl_48;
         margin-bottom: $space_m_24;
        
     }
