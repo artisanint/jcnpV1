@@ -151,6 +151,7 @@ pointer-events: none;
     transition: all ease 0.3s;
     opacity: 0;
     visibility: hidden;
+    z-index: 99;
 }
 
 @media(min-width: 992px){

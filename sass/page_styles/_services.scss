@@ -41,7 +41,7 @@
         .service_heading{
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
             gap: $space_s_16;
             padding-bottom: $space_m_24;
     
@@ -81,3 +81,9 @@
         }
        }
     }
+
+  .service .service_buttons{
+    display: flex;
+    flex-direction:row;
+    gap: $space_xl_48;
+  }

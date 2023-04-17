@@ -1,8 +1,16 @@
-section.home_hero{
-    height: 100vh;
+.home_hero{
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
 
+
 }
+.container_content_over {
+    width: clamp(250px, 90vw, 1440px);
+    height: 100%;
+    margin: 0 auto;
+
+   }
 .home_hero_container{
     height: 100%;
     width: 100%;
@@ -14,7 +22,7 @@ section.home_hero{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height:50vh;
+    min-height:50vh;
     width:100%;
     overflow: hidden;
     gap: $space_xl_48;
@@ -38,11 +46,10 @@ section.home_hero{
 }
 
 .home_hero_right{
-    height: 50vh;
+    min-height: 50vh;
     width: 100%;
     max-width:100%;
     box-sizing: border-box;
-    background-color: green;
     margin: 0;
     padding: 0;
 img{
@@ -56,14 +63,26 @@ img{
 
  @media screen and (min-width:900px ){
     .home_hero_container{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 45% 55% !important;
+        gap: $space_l_32;
 
         .home_hero_left{
-            height: 100vh;
+            height: 100vh !important;
             
         }
         .home_hero_right{
-            height: 100vh;
+            width: 100%;
+            max-width: calc(50vw - 0.6rem);
+            height: 100vh !important;
+            position: absolute;
+            left: 50%;
+            overflow: hidden;
+
+            img{
+               -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+                clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+                overflow-x: hidden;
+            }
         }
     }
 

@@ -75,6 +75,7 @@
     height: 100%;
     width: 100%;
     margin-top: $space_m_24;
+    // background-color: salmon;
 }
 .about_section_2_left{
     margin-bottom: $space_m_24;
@@ -116,6 +117,7 @@
    }
    .pillars{
      display: grid;
+     grid-template-columns: 1fr 1fr;
      gap: $space_l_32;
      margin-top: $space_xl_48;
 
@@ -156,6 +158,7 @@
         h2{
             @include heading_4($main_font, $primary_colour);
             padding-bottom: $space_l_32;
+            text-align: center;
             
             text-transform: uppercase;
             span{
@@ -167,6 +170,7 @@
             .about_section_3_excec{
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 gap: $space_m_24;
                 img{
                     width: 200px;
@@ -180,6 +184,7 @@
                 }
                 h5{
                     @include heading_5($alt_font, $primary_colour);
+                    text-align:center; 
 
                 }
                 p{
@@ -211,6 +216,8 @@
 
 //Media Queries
 @media screen and (min-width: 800px) and (max-width: 1020px){
+
+
     .about_section_2_right{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -219,7 +226,11 @@
         grid-template-columns: 1fr 1fr;
         
     }
-   .mission_visio
+   .about_section_3_container{
+    h2{
+        text-align: left !important;
+    }
+   }
     .about_section_3_excecs{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -243,6 +254,9 @@
         }
         
     }
+    .about_section_2{
+        min-height: auto !important;
+    }
     .about_section_2_container{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -252,7 +266,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: -5rem;
+        // margin-top: -5rem;
     }
     .mission_vision_container{
         grid-template-columns: 1fr 1fr;
@@ -271,7 +285,11 @@
             width: auto !important;
         }
     }
-
+    .about_section_3_container{
+        h2{
+            text-align: left !important;
+        }
+       }
 
     .about_section_3_excecs{
         display: grid;
